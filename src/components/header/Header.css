@@ -1,0 +1,67 @@
+/* Nền sáng với đổ bóng */
+.custom-header {
+  background-color: #f9f9f9;
+  padding: 15px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Flexbox cho header container */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+}
+/* Logo và tên thương hiệu */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+/* Tắt gạch chân cho logo và text */
+.brand-name a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+/* Tùy chỉnh container của menu */
+.menu-container {
+  flex-grow: 0.7;
+  display: flex;
+  justify-content: flex-end; /* Đẩy menu về phía phải */
+}
+
+/* Tùy chỉnh menu */
+.custom-menu {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  flex-grow: 0.5;
+}
+
+.custom-menu .ant-menu-item {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  padding: 0 35px;
+}
+
+/* Tắt gạch chân khi hover */
+.custom-menu .ant-menu-item:hover {
+  color: rgb(0, 123, 255);
+  text-decoration: none;
+}
+
+/* Mục được chọn */
+.custom-menu .ant-menu-item-selected {
+  color: rgb(0, 123, 255);
+}
