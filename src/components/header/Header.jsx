@@ -22,7 +22,7 @@ function Header() {
       <nav
         className="navbar navbar-expand-lg navbar-light bg-light sticky-top"
         style={{
-          boxShadow: scrolled ? "0 2px 8px rgba(0, 0, 0, 0.15)" : "none",
+          boxShadow: scrolled ? "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" : "none",
           transition: "box-shadow 0.3s ease-in-out",
         }}
       >
