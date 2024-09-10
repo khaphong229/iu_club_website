@@ -5,7 +5,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <Outlet />
+        <Outlet />
       <Footer />
     </>
   );

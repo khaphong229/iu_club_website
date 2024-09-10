@@ -1,19 +1,18 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
-// import "./index.css";
+import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./ErrorPage.jsx";
-import Education from "./pages/education/education.jsx";
-import Members from "./pages/members/Members.jsx";
-import Events from "./pages/events/events.jsx";
-import HomePage from "./pages/home/Home.jsx";
+import Education from "./pages/Education/Education.jsx";
+import Members from "./pages/Members/Members.jsx";
+import Events from "./pages/Events/Events.jsx";
+import HomePage from "./pages/Home/Home.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-
     errorElement: <ErrorPage />,
     children: [
       {

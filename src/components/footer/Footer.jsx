@@ -1,5 +1,5 @@
-import { PhoneOutlined, MailOutlined, GlobalOutlined } from "@ant-design/icons"; // Import các icon từ Ant Design
-import "./Footer.css"; // Import CSS
+
+import "./footer.css"; // Import CSS
 
 const Footer = () => {
   return (
@@ -8,18 +8,17 @@ const Footer = () => {
         {/* Cột liên hệ */}
         <div className="footer-column contact-info">
           <h2 className="footer-brand">
-            <GlobalOutlined style={{ marginRight: "10px" }} /> IUC
+            <i className="bi bi-suit-heart-fill"></i>IU CLUB
           </h2>
           <ul>
             <li>
-              <PhoneOutlined style={{ marginRight: "10px" }} /> 097 467 8647
+              <i className="bi bi-telephone"></i>19001222
             </li>
             <li>
-              <MailOutlined style={{ marginRight: "10px" }} />{" "}
-              anhpd.ptit@gmail.com
+              <i className="bi bi-mailbox"></i>iuclub.ptit@dev.com
             </li>
             <li>
-              <GlobalOutlined style={{ marginRight: "10px" }} /> proptit.com
+              <i className="bi bi-globe"></i>iuclub.com
             </li>
           </ul>
         </div>
@@ -29,13 +28,13 @@ const Footer = () => {
           <h3>VỀ CHÚNG TÔI</h3>
           <ul>
             <li>
-              <a href="#">Sự kiện nổi bật</a>
+              <a href="#">Fanpage</a>
             </li>
             <li>
               <a href="#">Video giới thiệu</a>
             </li>
             <li>
-              <a href="#">Q & A</a>
+              <a href="#">Q&A</a>
             </li>
           </ul>
         </div>
@@ -71,7 +70,7 @@ const Footer = () => {
               <a href="#">Sự kiện</a>
             </li>
             <li>
-              <a href="#">Phòng truyền thông</a>
+              <a href="#">Thành viên</a>
             </li>
           </ul>
         </div>
@@ -79,16 +78,16 @@ const Footer = () => {
 
       {/* Phần bản quyền */}
       <div className="footer-bottom">
-        <p>&copy;2024 | Design by AnhPD D23</p>
+        <p>&copy;2024 | Design by WEB TEAM GEN 1</p>
         <div className="social-links">
           <a href="#">
-            <i className="fab fa-facebook"></i>
+            <i className="bi bi-facebook"></i>
           </a>
           <a href="#">
-            <i className="fab fa-youtube"></i>
+            <i className="bi bi-youtube"></i>
           </a>
           <a href="#">
-            <i className="fas fa-envelope"></i>
+            <i className="bi bi-envelope"></i>
           </a>
         </div>
       </div>

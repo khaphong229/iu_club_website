@@ -1,68 +1,98 @@
+import { NavLink } from "react-router-dom";
+import "./header.css";
 import { useEffect, useState } from "react";
-import { Menu } from "antd";
-import { Link } from "react-router-dom";
-import "./Header.css"; // Import custom CSS
 
-const Header = () => {
-  const [current, setCurrent] = useState("");
+function Header() {
+  const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
-    if (location && location.pathname) {
-      const totalPathName = ["dao-tao", "thanh-vien", "su-kien"];
-      const current = totalPathName.find((item) => {
-        return `/${item}` === `${location.pathname}`;
-      });
-      if (current) {
-        setCurrent(current);
+    const handleScroll = () => {
+      if (window.scrollY > 80) {
+        setScrolled(true);
       } else {
-        setCurrent("home");
+        setScrolled(false);
       }
-    }
-  }, [location]);
-
-  const items = [
-    {
-      label: <Link to="/">TRANG CHỦ</Link>,
-      key: "home",
-    },
-    {
-      label: <Link to="/dao-tao">ĐÀO TẠO</Link>,
-      key: "dao-tao",
-    },
-    {
-      label: <Link to="/su-kien">SỰ KIỆN</Link>,
-      key: "su-kien",
-    },
-    {
-      label: <Link to="/thanh-vien">THÀNH VIÊN</Link>,
-      key: "phong-truyen-thong",
-    },
-  ];
-
-  const onClick = (e) => {
-    setCurrent(e.key);
-  };
-
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrolled]);
   return (
-    <header className="custom-header">
-      <div className="container header-container">
-        {/* Logo và tên CLB */}
-        <div className="logo">
-          <img src="/public/vite.svg" alt="Logo" />
-          <span className="brand-name">CLB Lập Trình PTIT</span>
+    <>
+      <nav
+        className="navbar navbar-expand-lg navbar-light bg-light sticky-top"
+        style={{
+          boxShadow: scrolled ? "0 2px 8px rgba(0, 0, 0, 0.15)" : "none",
+          transition: "box-shadow 0.3s ease-in-out",
+        }}
+      >
+        <div className="container">
+          <NavLink className="navbar-brand" to="/">
+            <span className="text-primary fw-bolder">IU</span> CLUB
+          </NavLink>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active-link px-4" : "nav-link px-4"
+                  }
+                  aria-current="page"
+                  to="/"
+                >
+                  Trang chủ
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active-link px-4" : "nav-link px-4"
+                  }
+                  aria-current="page"
+                  to="/dao-tao"
+                >
+                  Đào tạo
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active-link px-4" : "nav-link px-4"
+                  }
+                  aria-current="page"
+                  to="/su-kien"
+                >
+                  Sự kiện
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active-link px-4" : "nav-link px-4"
+                  }
+                  aria-current="page"
+                  to="/thanh-vien"
+                >
+                  Thành viên
+                </NavLink>
+              </li>
+            </ul>
+          </div>
         </div>
-        {/* Menu */}
-        <div className="menu-container">
-          <Menu
-            onClick={onClick}
-            selectedKeys={[current]}
-            mode="horizontal"
-            items={items}
-            className="custom-menu"
-          />
-        </div>
-      </div>
-    </header>
+      </nav>
+    </>
   );
-};
+}
 
 export default Header;
