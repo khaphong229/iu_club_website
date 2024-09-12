@@ -74,3 +74,30 @@ export const fetchProductImage = async(imageName) => {
         return null
     }
 }
+
+
+//code hướng dẫn lấy ảnh ra
+
+// import React, { useState, useEffect } from 'react';
+// import { fetchActivityImage } from '../services/storage'; // Import hàm fetch ảnh từ thư mục 'activities'
+
+// const ActivityImageComponent = () => {
+//   const [imageURL, setImageURL] = useState('');
+
+//   useEffect(() => {
+//     const loadImage = async () => {
+//       const url = await fetchActivityImage('activity-image.jpg'); // Tên ảnh trong thư mục 'activities'
+//       setImageURL(url);
+//     };
+
+//     loadImage();
+//   }, []);
+
+//   return (
+//     <div>
+//       {imageURL ? <img src={imageURL} alt="Activity" /> : <p>Đang tải ảnh...</p>}
+//     </div>
+//   );
+// };
+
+// export default ActivityImageComponent;
