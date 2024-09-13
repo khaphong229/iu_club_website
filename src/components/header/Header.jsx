@@ -20,7 +20,7 @@ function Header() {
   return (
     <>
       <nav
-        className="navbar navbar-expand-lg navbar-light bg-light sticky-top"
+        className="navbar navbar-expand-lg navbar-light bg-white sticky-top"
         style={{
           boxShadow: scrolled ? "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" : "none",
           transition: "box-shadow 0.3s ease-in-out",
