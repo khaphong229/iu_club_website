@@ -58,12 +58,12 @@
   background: linear-gradient(to right, #0d6efd 0%, #cf33bf 93%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  user-select: none;
 }
 
 .header-detail__button button {
   border: none;
   color: white;
-
   transition: ease 0.5s;
 }
 
@@ -95,6 +95,9 @@
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
+.carousel-caption {
+  user-select: none;
+}
 /* css phần giới thiệu  */
 
 .introduce {

@@ -1,22 +1,25 @@
 import { useEffect } from "react";
-import { fetchActivityImage } from "../../services/storage";
-
-import "./Home.css";
 import { useState } from "react";
+import "./Home.css";
+
+import imgHuynh from '../../../public/images/advisors/1.jpg'
+import imgDai from '../../../public/images/advisors/2.jpg'
+
 const HomePage = () => {
   const [imageURLs, setImageURLs] = useState([]);
 
   useEffect(() => {
-    const loadImage = async () => {
-      const imageNames = ["1.jpg", "2.jpg", "3.jpg"];
-      const url = await Promise.all(
-        imageNames.map(async (imageName) => await fetchActivityImage(imageName))
+    const loadImage = () => {
+      const imageNames = ["6.jpg", "1.jpg", "7.jpg", "8.jpg"];
+      const urls = imageNames.map(
+        (imageName) => `/images/activities/${imageName}`
       );
-      setImageURLs(url);
+      setImageURLs(urls);
     };
 
     loadImage();
   }, []);
+
   return (
     <>
       {/* section header start */}
@@ -114,7 +117,7 @@ const HomePage = () => {
               </div>
             </div>
             <div className="introduce-img col-12 col-xl-7 p-0 position-relative">
-              <img src={imageURLs[2]} alt="" className="img-fluid" />
+              <img src={imageURLs[1]} alt="" className="img-fluid" />
               <div className="introduce-btn">
                 <a href="#" className="btn btn-primary">
                   Xem chi tiết
@@ -125,7 +128,6 @@ const HomePage = () => {
         </div>
       </section>
       {/* section introduce end */}
-
       {/* section advisors start */}
       <section id="advisors" className="advisors section-padding py-5">
         <div className="container">
@@ -140,10 +142,10 @@ const HomePage = () => {
               nghiệm giảng dạy tại khoa Viện khoa học kĩ thuật bưu điện
             </p>
           </div>
-          <div className="row row-cols-1 row-cols-md-2 g-4">
+          <div className="row row-cols-1 row-cols-md-2 g-4 ">
             <div className="col">
               <div className="card">
-                <img src={imageURLs} className="card-img-top" alt="..." />
+                <img src={imgHuynh} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Thầy Phan Lý Huỳnh</h5>
                   <p className="card-text">
@@ -154,7 +156,7 @@ const HomePage = () => {
             </div>
             <div className="col">
               <div className="card">
-                <img src={imageURLs} className="card-img-top" alt="..." />
+                <img src={imgDai} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Anh Trần Quang Đại</h5>
                   <p className="card-text">
