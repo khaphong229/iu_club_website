@@ -34,7 +34,7 @@ const Events = () => {
     </div>
   {/* Events Pages */}
   {/* Events list */}
-  <div className="events-list">
+  {/* <div className="events-list">
     <div className="container">
       <div className="row">
       <div className=" col-lg-6 col-md-6 col-sm-12">
@@ -55,7 +55,38 @@ const Events = () => {
       </div>
       </div>
     </div>
+  </div> */}
+
+  <div className="events-list">
+  <div className="container">
+    <div className="row">
+      <div className="col-lg-6 col-md-6 col-sm-12">
+        <div className="card">
+          <img src={pictures3} className="card-img-top" alt="Hoạt Động" />
+          <div className="card-body">
+            <h3 className="card-title">Hoạt Động</h3>
+            <p className="card-text">
+              Một số hoạt động diễn ra trong sự kiện này.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="col-lg-6 col-md-6 col-sm-12">
+        <div className="card">
+          <img src={pictures2} className="card-img-top" alt="Giải Thưởng" />
+          <div className="card-body">
+            <h3 className="card-title">Giải Thưởng</h3>
+            <p className="card-text">
+              Các giải thưởng đã được trao trong sự kiện.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
+
+
   {/* End Events list */}
   {/* Events activities  */}
   <div className="events-Activities">
@@ -141,62 +172,33 @@ const Events = () => {
 
   {/* Events prize */}
   <div className="events-Prizes">
-    <div className="container">
-      <div className="row">
-        <div className="col-12">
-          <h3 className="sub-title">Các hoạt động khác</h3>
-        </div>
-         <div className=" col-lg-4 col-md-6 col-sm-12 col-12">
-          <div className="prize">
-            <div className="images">
-              <img src={pictures10} alt="events" />
-            </div>
-          </div>
-          <h3 className="title">Du lịch</h3>
-         </div>
-         <div className="col-lg-4 col-md-6 col-sm-12 col-12">
-          <div className="prize">
-            <div className="images">
-              <img src={pictures11} alt="events" />
-            </div>
-          </div>
-          <h3 className="title">CODING FEST 2024 THE UNIVERSITY OF SYDNEY</h3>
-         </div>
-         <div className="col-lg-4 col-md-6 col-sm-12 col-12">
-          <div className="prize">
-            <div className="images">
-              <img src={pictures12} alt="events" />
-            </div>
-          </div>
-          <h3 className="title">UDU x NEWS</h3>
-         </div>
-         <div className="col-lg-4 col-md-6 col-sm-12 col-12">
-          <div className="prize">
-            <div className="images">
-              <img src={pictures13} alt="events" />
-            </div>
-          </div>
-          <h3 className="title">COMPANY TOUR 2024</h3>
-         </div>
-         <div className="col-lg-4 col-md-6 col-sm-12 col-12">
-          <div className="prize">
-            <div className="images">
-              <img src={pictures14} alt="events" />
-            </div>
-          </div>
-          <h3 className="title">GIẢI BÓNG ĐÁ UDU CUP 2024</h3>
-         </div>
-         <div className="col-lg-4 col-md-6 col-sm-12 col-12">
-          <div className="prize">
-            <div className="images">
-              <img src={pictures15} alt="events" />
-            </div>
-          </div>
-          <h3 className="title">cuộc thi AI Challenge 2024</h3>
-         </div>
+  <div className="container">
+    <div className="row">
+      <div className="col-12">
+        <h3 className="sub-title">Các hoạt động khác</h3>
       </div>
+      {[
+        { img: pictures10, title: "Du lịch" },
+        { img: pictures11, title: "CODING FEST 2024 THE UNIVERSITY OF SYDNEY" },
+        { img: pictures12, title: "UDU x NEWS" },
+        { img: pictures13, title: "COMPANY TOUR 2024" },
+        { img: pictures14, title: "GIẢI BÓNG ĐÁ UDU CUP 2024" },
+        { img: pictures15, title: "cuộc thi AI Challenge 2024" }
+      ].map((event, index) => (
+        <div key={index} className="col-lg-4 col-md-6 col-sm-6 col-12">
+          <div className="card" style={{ width: '18rem' }}>
+            <img src={event.img} className="card-img-top" alt={event.title} />
+            <div className="card-body">
+              <h5 className="card-title">{event.title}</h5>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   </div>
+</div>
+
+
   {/* End Events prize */}
 
   </>;
