@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
@@ -27,17 +28,17 @@ const Footer = () => {
             <h4 className="fw-semibold">VỀ CHÚNG TÔI</h4>
             <ul className="list-unstyled">
               <li className="mb-2">
-                <a href="#" className="text-dark text-decoration-none">
+                <Link to="https://www.facebook.com/profile.php?id=61564322655289" className="text-dark text-decoration-none" target="_blank">
                   Fanpage
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a href="#" className="text-dark text-decoration-none">
+                <Link to="https://www.youtube.com/@IUCLUB-hh4sv" className="text-dark text-decoration-none" target="_blank">
                   Video giới thiệu
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-dark text-decoration-none">
+                <a href="#faq" className="text-dark text-decoration-none">
                   Q&A
                 </a>
               </li>
@@ -48,14 +49,14 @@ const Footer = () => {
             <h4 className="fw-semibold">TRANG CHỦ</h4>
             <ul className="list-unstyled">
               <li className="mb-2">
-                <a href="#" className="text-dark text-decoration-none">
+                <Link to="/" className="text-dark text-decoration-none">
                   Giới thiệu
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a href="#" className="text-dark text-decoration-none">
+                <Link to="/su-kien" className="text-dark text-decoration-none">
                   Hoạt động
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
                 <a href="#" className="text-dark text-decoration-none">
@@ -63,7 +64,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-dark text-decoration-none">
+                <a href="#team-project" className="text-dark text-decoration-none">
                   Team dự án
                 </a>
               </li>
@@ -75,24 +76,24 @@ const Footer = () => {
             <h4 className="fw-semibold">TRANG KHÁC</h4>
             <ul className="list-unstyled">
               <li className="mb-2">
-                <a href="#" className="text-dark text-decoration-none">
+                <Link to="/" className="text-dark text-decoration-none">
                   Trang chủ
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a href="#" className="text-dark text-decoration-none">
+                <Link to="/dao-tao" className="text-dark text-decoration-none">
                   Đào tạo
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a href="#" className="text-dark text-decoration-none">
+                <Link to="/su-kien" className="text-dark text-decoration-none">
                   Sự kiện
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-dark text-decoration-none">
+                <Link to="/thanh-vien" className="text-dark text-decoration-none">
                   Thành viên
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

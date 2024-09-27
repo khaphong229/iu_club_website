@@ -1,5 +1,6 @@
 :root {
   --main-color: #0d6efd;
+  --tmp-color: #ecf4ff;
 }
 
 /* .carousel-inner:before {
@@ -9,59 +10,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.488);
   z-index: 1;
 } */
 
-.carousel-item img {
-  max-height: 500px;
-  object-fit: cover;
-}
-
-.header-slider__title {
-  background: #0d6efd;
-  background: linear-gradient(to right, #0d6efd 0%, #cf33bf 93%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.header-detail__button button {
-  border: none;
-  color: white;
-
-  transition: ease 0.5s;
-}
-
-.header-detail__button button:nth-child(1) {
-  transition: 0.5s;
-  background: linear-gradient(
-      90deg,
-      var(--c1, #f6d365),
-      var(--c2, #fda085) 51%,
-      var(--c1, #f6d365)
-    )
-    var(--x, 0) / 200%;
-  /* background: rgb(13, 110, 253);
-  background: linear-gradient(
-    90deg,
-    rgba(13, 110, 253, 1) 0%,
-    rgba(207, 51, 191, 1) 100%
-  ); */
-}
-.header-detail__button button:nth-child(1):hover {
-  --x: 100%;
-}
-
-.header-detail__button button:nth-child(1) {
-  --c1: #0d6efd;
-  --c2: #cf33bf;
-}
-
-.header-detail__button button:nth-child(2) {
-  background-color: var(--main-color);
-}
-
-.header-detail__button button:hover {
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
