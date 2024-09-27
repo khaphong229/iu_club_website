@@ -7,7 +7,7 @@ import web from '../../../../../public/images/team_project/2.jpg'
 function TeamProjects() {
   return (
     <div>
-      <section className="team-project py-5">
+      <section className="team-project py-5" id="team-project">
         <div className="container text-center">
           <h1 className="team-head__title mb-4 fw-bold">Team dự án</h1>
           <div className="row">

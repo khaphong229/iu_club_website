@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: "thanh-vien",
-        element: <Members />,
+        element: <ErrorPage />,
       },
       {
         path: "su-kien",

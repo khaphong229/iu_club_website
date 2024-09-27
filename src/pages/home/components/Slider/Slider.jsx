@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import './styles.css'
+import "./styles.css";
+import { Link } from "react-router-dom";
 
 function Slider() {
   const [imageURLs, setImageURLs] = useState([]);
@@ -17,7 +18,7 @@ function Slider() {
   }, []);
   return (
     <>
-      <div className="header-slider container mb-5 ">
+      <div className="header-slider container mb-5" id="silder">
         <div className="row">
           <div className="header-slider__title fs-1 fw-bold my-3 my-md-5 col-12 col-md-6">
             Tuyển thành viên gen 2
@@ -33,8 +34,24 @@ function Slider() {
               <strong>Thời gian ứng tuyển: 03/09/2024 - 29/09/2024</strong>
             </div>
             <div className="header-detail__button d-flex justify-content-center gap-5 my-4">
-              <button className="px-3 py-2 rounded-pill">Đăng ký ngay</button>
-              <button className="px-3 py-2 rounded-pill">Xem thêm</button>
+              <button className="px-3 py-2 rounded-pill">
+                <Link
+                  to="https://bit.ly/dangkyiuclub2024"
+                  className="text-decoration-none text-light"
+                  target="_blank"
+                >
+                  Đăng ký ngay
+                </Link>
+              </button>
+              <button className="px-3 py-2 rounded-pill">
+                <Link
+                  to="https://www.facebook.com/share/p/HJaNhiaLEEm3Mchf/"
+                  className="text-decoration-none text-light"
+                  target="_blank"
+                >
+                  Xem thêm
+                </Link>
+              </button>
             </div>
           </div>
           <div
@@ -73,9 +90,13 @@ function Slider() {
                       Một trong những câu lạc bộ thuộc Học viện Công nghệ Bưu
                       chính Viễn thông về lĩnh vực công nghệ thông tin
                     </p>
-                    <a href="#" className="btn btn-primary">
+                    <Link
+                      to="https://www.facebook.com/profile.php?id=61564322655289"
+                      className="text-decoration-none text-light btn btn-primary"
+                      target="_blank"
+                    >
                       Xem thêm
-                    </a>
+                    </Link>
                   </div>
                 </div>
               ))}

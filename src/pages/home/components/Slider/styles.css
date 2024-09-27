@@ -35,7 +35,9 @@
   .header-slider__title,
   .introduce-content__title,
   .advisors-head__title,
-  .team-head__title {
+  .team-head__title,
+  .faq-head__title,
+  .manager-head__title {
     background: #0d6efd;
     background: linear-gradient(to right, #0d6efd 0%, #cf33bf 93%);
     -webkit-background-clip: text;

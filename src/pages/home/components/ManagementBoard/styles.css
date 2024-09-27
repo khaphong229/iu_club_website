@@ -1,4 +1,47 @@
 .img-manager {
-    width: 150px !important;
-    height: 150px !important;
+  object-fit: cover;
+}
+
+/* styles.css */
+.manager-board {
+  padding: 2rem 0;
+}
+
+.img-manager {
+  width: 100%;
+  max-width: 240px;
+  height: 240px;
+  object-fit: cover;
+}
+
+.transition-slide {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .img-manager {
+    max-width: 180px;
+    height: 180px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    top: 40%;
+  }
+
+  .manager-head__title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .img-manager {
+    max-width: 140px;
+    height: 140px;
+  }
+
+  .manager-head__title {
+    font-size: 1.2rem;
+  }
 }

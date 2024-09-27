@@ -1,6 +1,7 @@
-import React from 'react';
-import './styles.css';
-import imgIntroduce from '../../../../../public/images/activities/1.jpg';
+import React from "react";
+import "./styles.css";
+import imgIntroduce from "../../../../../public/images/activities/1.jpg";
+import { Link } from "react-router-dom";
 
 function Introduce() {
   return (
@@ -21,7 +22,7 @@ function Introduce() {
               <p className="introduce-content__description">
                 <strong>IU Club (IUC) </strong>
                 là câu lạc bộ CNTT định hướng ứng dụng thuộc UDU, thành lập ngày
-                03/01/2020, với môi trường "Shine and Thrive" giúp mỗi thành
+                03/01/2024, với môi trường "Shine and Thrive" giúp mỗi thành
                 viên phát triển tối đa tiềm năng. Tại đây, sinh viên được khuyến
                 khích sáng tạo, học hỏi, và hỗ trợ vượt qua thử thách. IUC quy
                 tụ những người trẻ đam mê công nghệ, cùng nhau chinh phục các
@@ -35,9 +36,13 @@ function Introduce() {
             <div className="introduce-img col-12 col-xl-7 p-0 position-relative">
               <img src={imgIntroduce} alt="" className="img-fluid" />
               <div className="introduce-btn">
-                <a href="#" className="btn btn-primary">
-                  Xem chi tiết
-                </a>
+                <Link
+                  to="https://www.facebook.com/profile.php?id=61564322655289"
+                  className="text-decoration-none text-light btn btn-primary"
+                  target="_blank"
+                >
+                  Xem thêm
+                </Link>
               </div>
             </div>
           </div>
