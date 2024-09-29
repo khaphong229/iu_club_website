@@ -5,7 +5,7 @@ import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./ErrorPage.jsx";
 import Education from "./pages/Education/Education.jsx";
-import Members from "./pages/Members/Members.jsx";
+// import Members from "./pages/Members/Members.jsx";
 import Events from "./pages/Events/Events.jsx";
 import HomePage from "./pages/Home/Home.jsx";
 

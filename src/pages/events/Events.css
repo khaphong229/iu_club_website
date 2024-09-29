@@ -14,7 +14,7 @@
 
 .events-Pages .events-images {
     width: 100%; /* Thay đổi để chiếm toàn bộ chiều rộng */
-    height: 700px; /* Sử dụng chiều cao viewport để hình ảnh có chiều cao cố định */
+    height: 100vh; /* Sử dụng chiều cao viewport để hình ảnh có chiều cao cố định */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
@@ -178,17 +178,17 @@
 
 /* End Events list */
 /* Events Activities */
-.events-Activities{
+/* .events-Activities{
     margin-top: 80px;
     margin-bottom: 80px;
-}
+} */
 
 .events-Activities .sub-title{
     color: #0d6efd;
-   font-size: 50px;
+   /* font-size: 50px; */
    text-align: center;
-   padding: 20px;
-   margin-bottom: 50px;
+   /* padding: 20px;
+   margin-bottom: 50px; */
 }
 
 .events-Activities  .images{

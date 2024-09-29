@@ -89,11 +89,11 @@ const Events = () => {
 
   {/* End Events list */}
   {/* Events activities  */}
-  <div className="events-Activities">
+  <div className="events-Activities my-5">
     <div className="container">
       <div className="row ">
         <div className="col-12">
-          <h3 className="sub-title">Hoạt động thường niên</h3>
+          <h3 className="sub-title mb-4 fw-bold">Hoạt động thường niên</h3>
         </div>
         </div>
         <div className="row align-items-center mb-5">
