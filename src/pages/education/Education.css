@@ -1,0 +1,115 @@
+
+  /* Phần header với nền */
+.hero-section {
+  position: relative;
+  height: 400px;
+  background-image: url('./nền.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 20px; 
+  left: 20px; 
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  max-width: 40%; 
+  text-align: left;
+  opacity: 0; /* Bắt đầu ẩn */
+  transform: translateX(-100%); /* Bắt đầu từ ngoài màn hình bên trái */
+  animation: slideIn 2s ease forwards; /* Thêm hoạt ảnh */
+}
+
+/* Hoạt ảnh trượt từ trái sang */
+@keyframes slideIn {
+  to {
+    opacity: 1; /* Hiện dần */
+    transform: translateX(0); /* Trượt vào vị trí ban đầu */
+  }
+}
+
+.hero-section h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.hero-section p {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.education-container {
+  padding: 50px;
+  text-align: center;
+}
+
+.education-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.education-card {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Phần hình ảnh và tiêu đề (chiếm 3 phần) */
+.image-section {
+  flex: 3;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.image-section h3 {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Phần nội dung (chiếm 7 phần) */
+.content-section {
+  flex: 7;
+  padding: 20px;
+  text-align: left;
+}
+
+.content-section p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Căn chỉnh chung */
+h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
