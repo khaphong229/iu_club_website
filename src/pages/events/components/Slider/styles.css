@@ -1,0 +1,31 @@
+.events-images img {
+  object-position: center bottom;
+}
+
+.bg-overlay {
+  background-color: rgba(33, 37, 41, 0.6);
+}
+
+.events-list {
+  background-color: #f6f6f6;
+}
+
+@media (max-width: 767.98px) {
+  .events-contents h1 {
+    font-size: 2rem;
+  }
+  
+  .events-contents p {
+    font-size: 1rem; 
+  }
+  
+  .events-images img {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .events-contents h1 {
+    font-size: 1.5rem;
+  }
+}
