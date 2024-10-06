@@ -1,0 +1,21 @@
+
+:root {
+  --main-color: #0d6efd;
+}
+
+/* Trang khác */
+ul li a {
+  transition: ease 0.5s;
+}
+
+ul li:hover a {
+  color: var(--main-color) !important;
+}
+
+/* Social links */
+.social-link a i {
+  transition: ease 0.3s;
+}
+.social-link a i:hover {
+  color: var(--main-color);
+}

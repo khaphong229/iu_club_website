@@ -1,0 +1,26 @@
+
+/* .navbar{
+  height: 5rem;
+} */
+
+:root {
+  --main-color: #0d6efd;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--main-color) !important;
+}
+
+.active-link {
+  color: var(--main-color) !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}

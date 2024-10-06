@@ -1,0 +1,17 @@
+
+.team-project {
+  background-color: #f6f6f6;
+}
+.team-project .card-img-top {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .team-project .card {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .team-project .card:hover {
+    transform: translateY(-10px);
+  }
