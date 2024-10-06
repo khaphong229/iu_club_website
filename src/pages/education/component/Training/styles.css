@@ -1,0 +1,7 @@
+.title__training {
+  background: #0d6efd;
+  background: linear-gradient(to right, #0d6efd 0%, #cf33bf 93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  user-select: none;
+}

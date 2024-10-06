@@ -1,17 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./styles.css";
-import imgIntroduce from "../../../../../public/images/activities/1.jpg";
+import imgIntroduce from "../../../../../public/images/activities/11.jpg";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 function Introduce() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
   return (
     <div>
       <section id="introduce" className="introduce section-padding py-5">
         <div className="container">
-          <h1 className="introduce-content__title mb-4 text-xl-center lh-base fw-bold">
+          <h1
+            className="introduce-content__title mb-4 text-xl-center lh-base fw-bold"
+            data-aos="fade-up"
+          >
             Giới Thiệu
           </h1>
-          <div className="row introduce-container shadow-lg rounded position-relative">
+          <div
+            className="row introduce-container shadow-lg rounded position-relative"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div className="introduce-content col-12 col-xl-5 d-flex flex-column justify-content-start align-items-center align-items-xl-end p-4">
               <div className="circle circle-1"></div>
               <div className="circle circle-2"></div>

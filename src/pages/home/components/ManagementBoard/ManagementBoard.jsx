@@ -3,8 +3,10 @@ import minh from "../../../../../public/images/management_board/1.jpg";
 import dinh from "../../../../../public/images/management_board/2.jpg";
 import linh from "../../../../../public/images/management_board/3.jpg";
 import phong from "../../../../../public/images/management_board/4.jpg";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa"; // Sử dụng react-icons
-import './styles.css'
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import "./styles.css";
+import AOS from "aos";
+
 
 const members = [
   {
@@ -14,6 +16,7 @@ const members = [
     imgSrc: minh,
     status: "ĐANG CẬP NHẬT",
     isButtonDisabled: true,
+    link: "",
   },
   {
     name: "Trần Đức Định",
@@ -22,6 +25,7 @@ const members = [
     imgSrc: dinh,
     status: "XEM CHI TIẾT",
     isButtonDisabled: false,
+    link: "https://www.facebook.com/2107.2909.1209dinh",
   },
   {
     name: "Nguyễn Khả Phong",
@@ -30,6 +34,7 @@ const members = [
     imgSrc: phong,
     status: "ĐANG CẬP NHẬT",
     isButtonDisabled: true,
+    link: "",
   },
   {
     name: "Nguyễn Phương Linh",
@@ -38,15 +43,22 @@ const members = [
     imgSrc: linh,
     status: "ĐANG CẬP NHẬT",
     isButtonDisabled: true,
+    link: "",
   },
 ];
 
 const ManagementBoard = () => {
   const [startIndex, setStartIndex] = useState(0);
-  const [animationDirection, setAnimationDirection] = useState(""); // Điều chỉnh hướng trượt
-  const [visibleMembers, setVisibleMembers] = useState(3); // Số lượng thành viên hiển thị
+  const [animationDirection, setAnimationDirection] = useState("");
+  const [visibleMembers, setVisibleMembers] = useState(3);
 
-  // Hàm điều chỉnh số lượng thành viên hiển thị dựa trên kích thước màn hình
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    })
+  }, [])
+
   const handleResize = () => {
     if (window.innerWidth < 576) {
       setVisibleMembers(1);
@@ -57,7 +69,6 @@ const ManagementBoard = () => {
     }
   };
 
-  // Gọi hàm khi component mounted và khi window thay đổi kích thước
   useEffect(() => {
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -79,19 +90,25 @@ const ManagementBoard = () => {
   const displayedMembers = members
     .slice(startIndex, startIndex + visibleMembers)
     .concat(
-      members.slice(0, Math.max(0, startIndex + visibleMembers - members.length))
+      members.slice(
+        0,
+        Math.max(0, startIndex + visibleMembers - members.length)
+      )
     );
+
+  const handleClick = (link) => {
+    window.open(link, "_blank");
+  };
 
   return (
     <section id="manager-board" className="manager-board pb-5">
       <div className="container">
-        <div className="manager-board__head">
+        <div className="manager-board__head" data-aos="fade-up">
           <h1 className="manager-head__title mb-4 fw-bold text-center">
             Ban điều hành
           </h1>
         </div>
         <div className="d-flex justify-content-center align-items-center position-relative my-5">
-          {/* Nút điều hướng trái */}
           <button
             className="carousel-control-prev position-absolute"
             type="button"
@@ -107,9 +124,9 @@ const ManagementBoard = () => {
           >
             <FaArrowLeft size={30} color="blue" />
           </button>
-
-          {/* Hiển thị thành viên */}
-          <div className={`d-flex justify-content-center transition-slide gap-5 ${animationDirection}`}>
+          <div
+            className={`d-flex justify-content-center transition-slide gap-5 ${animationDirection}`}
+          >
             {displayedMembers.map((member, index) => (
               <div key={index} className="text-center mx-3">
                 <img
@@ -122,19 +139,16 @@ const ManagementBoard = () => {
                 <p>{member.term}</p>
                 <button
                   className={`btn ${
-                    member.isButtonDisabled
-                      ? "btn-secondary"
-                      : "btn-primary"
+                    member.isButtonDisabled ? "btn-secondary" : "btn-primary"
                   } rounded-pill`}
                   disabled={member.isButtonDisabled}
+                  onClick={() => handleClick(member.link)}
                 >
                   {member.status}
                 </button>
               </div>
             ))}
           </div>
-
-          {/* Nút điều hướng phải */}
           <button
             className="carousel-control-next position-absolute"
             type="button"
