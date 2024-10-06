@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./styles.css";
+import AOS from "aos";
 
 const Questions = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: false });
+  }, []);
+
   const faqData = [
     {
       question: "Câu lạc bộ CNTT này thành lập từ khi nào?",
@@ -49,17 +54,17 @@ const Questions = () => {
     <section id="faq" className="faq-section py-5">
       <div className="container">
         <div className="faq-head">
-          <h1 className="faq-head__title text-center mb-4 fw-bold">
+          <h1 className="faq-head__title text-center mb-4 fw-bold" data-aos="fade-up"> 
             Các câu hỏi thường gặp
           </h1>
-          <p className="text-center mb-5">
+          <p className="text-center mb-5" data-aos="fade-up">
             Dưới đây là những câu hỏi phổ biến thường được các bạn dành cho CLB.
           </p>
         </div>
 
         <div className="accordion" id="faqAccordion">
           {faqData.map((faq, index) => (
-            <div className="accordion-item" key={index}>
+            <div className="accordion-item" key={index} data-aos="fade-up" data-aos-delay={index * 100}>
               <h2 className="accordion-header" id={`heading${index}`}>
                 <button
                   className="accordion-button collapsed"

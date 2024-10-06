@@ -85,14 +85,14 @@ function Slider() {
                     alt={`Slide ${index + 1}`}
                   />
                   <div className="carousel-caption d-none d-xl-block">
-                    <h2 className="fw-bold">Câu lạc bộ IU PTIT</h2>
-                    <p>
+                    <h2 className="fw-bold animate-up">Câu lạc bộ IU PTIT</h2>
+                    <p className="animate-up delay-1">
                       Một trong những câu lạc bộ thuộc Học viện Công nghệ Bưu
                       chính Viễn thông về lĩnh vực công nghệ thông tin
                     </p>
                     <Link
                       to="https://www.facebook.com/profile.php?id=61564322655289"
-                      className="text-decoration-none text-light btn btn-primary"
+                      className="text-decoration-none text-light btn btn-primary animate-up delay-2"
                       target="_blank"
                     >
                       Xem thêm

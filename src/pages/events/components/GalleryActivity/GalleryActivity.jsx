@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './styles.css';
+import AOS from 'aos';
 
 const activities = [
   {
     title: "Tuyển thành viên",
     description: "Sự kiện tuyển thành viên của CLB chính là cơ hội tuyệt vời để các tân sinh viên đam mê công nghệ thông tin bước vào một cộng đồng năng động và đầy sáng tạo. Tham gia CLB không chỉ giúp các bạn mở rộng kiến thức chuyên môn mà còn là dịp để kết nối với những người cùng chung chí hướng, phát triển kỹ năng mềm và tích lũy kinh nghiệm thực tế.",
-    image: "/images/activities/pic3.jpg"
+    image: "/images/activities/tuyen-thanh-vien.jpg"
   },
   {
     title: "Game",
@@ -14,7 +15,7 @@ const activities = [
   },
   {
     title: "03/01",
-    description: "Sinh nhật, diễn ra vào ngày 3/1 hàng năm, là sự kiện đáng mong chờ nhất khi toàn thể thành viên cùng nhau tụ họp để kỷ niệm cột mốc tuổi mới của CLB. Đây không chỉ là dịp để nhìn lại hành trình phát triển, mà còn là khoảnh khắc đặc biệt, nơi mọi người gắn kết trong không khí ấm áp và đầy hứng khởi, cùng nhau chia sẻ niềm vui và hướng đến những thành tựu mới trong tương lai.",
+    description: "Sinh nhật, diễn ra vào ngày 03/01 hàng năm, là sự kiện đáng mong chờ nhất khi toàn thể thành viên cùng nhau tụ họp để kỷ niệm cột mốc tuổi mới của CLB. Đây không chỉ là dịp để nhìn lại hành trình phát triển, mà còn là khoảnh khắc đặc biệt, nơi mọi người gắn kết trong không khí ấm áp và đầy hứng khởi, cùng nhau chia sẻ niềm vui và hướng đến những thành tựu mới trong tương lai.",
     image: "/images/activities/pic6.jpg"
   },
   {
@@ -35,7 +36,7 @@ const activities = [
 ];
 
 const ActivityItem = ({ activity, index }) => (
-  <div className={`row align-items-center mb-5 ${index % 2 !== 0 ? 'flex-row-reverse' : ''}`}>
+  <div className={`row align-items-center mb-5 ${index % 2 !== 0 ? 'flex-row-reverse' : ''}`} data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}>
     <div className="col-lg-6 mb-4 mb-lg-0 col-sm-12 col-12">
       <div className="images">
         <img src={activity.image} alt={activity.title} className="img-fluid rounded" />
@@ -49,12 +50,18 @@ const ActivityItem = ({ activity, index }) => (
 );
 
 function GalleryActivity() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+    });
+  }, []);
   return (
     <div className="events-Activities my-5">
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h3 className="sub-title mb-5 fw-bold">Hoạt động thường niên</h3>
+            <h3 className="sub-title mb-5 fw-bold" data-aos="fade-up">Hoạt động thường niên</h3>
           </div>
         </div>
         {activities.map((activity, index) => (
