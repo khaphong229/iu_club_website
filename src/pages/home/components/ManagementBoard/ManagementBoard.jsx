@@ -3,7 +3,7 @@ import minh from "../../../../../public/images/management_board/1.jpg";
 import dinh from "../../../../../public/images/management_board/2.jpg";
 import linh from "../../../../../public/images/management_board/3.jpg";
 import phong from "../../../../../public/images/management_board/4.jpg";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import "./styles.css";
 import AOS from "aos";
 
@@ -122,7 +122,7 @@ const ManagementBoard = () => {
               zIndex: 1,
             }}
           >
-            <FaArrowLeft size={30} color="blue" />
+            <BsArrowLeftCircle size={30} color="blue" />
           </button>
           <div
             className={`d-flex justify-content-center transition-slide gap-5 ${animationDirection}`}
@@ -162,7 +162,7 @@ const ManagementBoard = () => {
               zIndex: 1,
             }}
           >
-            <FaArrowRight size={30} color="blue" />
+            <BsArrowRightCircle size={30} color="blue" />
           </button>
         </div>
       </div>
