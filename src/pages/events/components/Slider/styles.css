@@ -12,7 +12,7 @@
 
 @media (max-width: 767.98px) {
   .events-contents h1 {
-    font-size: 2rem;
+    font-size: 6rem;
   }
   
   .events-contents p {
@@ -26,7 +26,7 @@
 
 @media (max-width: 576px) {
   .events-contents h1 {
-    font-size: 1.5rem;
+    font-size: 4.5rem;
   }
 }
 
